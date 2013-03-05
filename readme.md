@@ -40,10 +40,9 @@ To suss out the app do the following:
 - Execute the webapp:  grails run-app
 
 
-
 #### [Kent Butler](https://github.com/kentbutler) - Developer
 
-[An open source developer](http://kentbutlercs.blogspot.hu/) just trying to make his job easier .
+[An open source developer](http://kentbutlercs.blogspot.hu/) just trying to make his job easier.
 
 
 ## License
