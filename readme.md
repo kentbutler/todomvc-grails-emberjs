@@ -1,6 +1,6 @@
 # ![TodoMVC-Grails-Ember](https://github.com/kentbutler/todomvc-grails-emberjs.git)
 
-## Helping you learn EmberJS with Grails
+### Helping you learn EmberJS with Grails
 
 This is a sample app which integrates the EmberJS version of Addy Osmani's  TodoMVC collection of Todo apps, with Grails supplying the REST service.
 
@@ -17,12 +17,12 @@ The baseline version of the web portion of this app can be found [in this reposi
 -- on updates, Ember automatically converts camelcase to underscored - i.e. property 'isCompleted' becomes 'is_completed' on the REST interface
 
 
-###### Changes to json-rest-api
+#### Changes to json-rest-api
 
 - [See the project](https://github.com/padcom/grails-json-rest-api)
 - Note if it's not there yet the pull is still pending
 
-###### Grails project requirements
+#### Grails project requirements
 
 This app uses the following plugins for testing:
 
@@ -30,7 +30,7 @@ This app uses the following plugins for testing:
 - [functional-test](http://www.grails.org/plugin/functional-test)
 
 
-###### Looking Around
+#### Looking Around
 
 To suss out the app do the following:
 
@@ -45,7 +45,7 @@ To suss out the app do the following:
 [An open source developer](http://kentbutlercs.blogspot.hu/) just trying to make his job easier.
 
 
-## License
+#### License
 
 MIT License
 Free to Good Home
