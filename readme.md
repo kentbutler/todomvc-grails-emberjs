@@ -30,14 +30,26 @@ This app uses the following plugins for testing:
 - [functional-test](http://www.grails.org/plugin/functional-test)
 
 
-#### Looking Around
+#### Installing and Executing
 
 To suss out the app do the following:
 
-- Install [Grails 2.1.1](http://grails.org/) 
-- Execute the functional tests:   grails test-app
---  and observe the different JSON output styles of the json-rest-api
-- Execute the webapp:  grails run-app
+* Install [Grails 2.1.1](http://grails.org/) 
+
+* Download this app
+        git clone https://github.com/kentbutler/todomvc-grails-emberjs.git
+
+* Download the fork of the grails-json-rest-api (at least for now)
+        git clone https://github.com/kentbutler/grails-json-rest-api.git
+
+* Place them alongside each other and test the app by opening a console inside the todomvc directory and run:
+        grails test-app
+-  observe the different JSON output styles of the json-rest-api
+
+* If tests pass then run the app via
+        grails run-app
+
+* If they do not pass, ensure the path to the json-rest-api inside of grails-app/conf/BuildConfig.groovy accurately locates the grails-json-rest-api plugin.
 
 
 #### [Kent Butler](https://github.com/kentbutler) - Developer
