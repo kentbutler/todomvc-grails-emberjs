@@ -7,11 +7,11 @@ import org.codehaus.groovy.grails.web.json.JSONObject
 class Todo {
     
     String title
-    boolean completed
+    boolean isCompleted
 
     static constraints = {
         title(blank:false, nullable:false,maxSize:64)
-        completed(default:false)
+        isCompleted(default:false)
     }
     
     
@@ -19,7 +19,7 @@ class Todo {
         StringBuilder sb = new StringBuilder()
         sb.append("\n    id:    ").append(id)
         sb.append("\n    Title:    ").append(title)
-        sb.append("\n    Completed:    ").append(completed)
+        sb.append("\n    Completed:    ").append(isCompleted)
         sb.toString()
     }
     
@@ -66,7 +66,7 @@ class Todo {
         JSONObject json = new JSONObject()
         json.put('id', id)
         json.put('title', title)
-        json.put('completed', completed)
+        json.put('isCompleted', isCompleted)
         return json
     }
 
@@ -80,7 +80,7 @@ class Todo {
             "title"
         ].each(JSONUtil.optStr.curry(json, this))
        [
-            "completed"
+            "isCompleted"
         ].each(JSONUtil.optBoolean.curry(json, this))
     }
 

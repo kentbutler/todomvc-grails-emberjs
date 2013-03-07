@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="linux-apollo" name="todo.TodoFunctionalTests" tests="5" time="1.438" timestamp="2013-03-06T14:08:10">
+  <properties />
+  <testcase classname="todo.TodoFunctionalTests" name="testList" time="0.98" />
+  <testcase classname="todo.TodoFunctionalTests" name="testCreate" time="0.136" />
+  <testcase classname="todo.TodoFunctionalTests" name="testShow" time="0.095" />
+  <testcase classname="todo.TodoFunctionalTests" name="testUpdate" time="0.123" />
+  <testcase classname="todo.TodoFunctionalTests" name="testDelete" time="0.102" />
+  <system-out><![CDATA[--Output from testList--
+Switching to browser client [default]
+Creating to new client [default] of type [class com.grailsrocks.functionaltest.client.BrowserClient]
+
+== Making request GET http://localhost:8080/todo/api/todo?useEntityRootName=false&dataFieldsOnly=false parameters: ==
+== Request headers: ============================================================
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"count":7,"data":[{"id":1,"title":"eat","completed":false},{"id":2,"title":"sleep","completed":false},{"id":3,"title":"work","completed":false},{"id":4,"title":"title","completed":false},{"id":5,"title":"title","completed":false},{"id":6,"title":"title","completed":false},{"id":7,"title":"title","completed":false}],"success":true}
+================================================================================
+#
+== Making request GET http://localhost:8080/todo/api/todo?useEntityRootName=true&dataFieldsOnly=true parameters: ==
+== Request headers: ============================================================
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"todo":[{"id":1,"title":"eat","completed":false},{"id":2,"title":"sleep","completed":false},{"id":3,"title":"work","completed":false},{"id":4,"title":"title","completed":false},{"id":5,"title":"title","completed":false},{"id":6,"title":"title","completed":false},{"id":7,"title":"title","completed":false},{"id":8,"title":"title","completed":false},{"id":9,"title":"title","completed":false},{"id":10,"title":"title","completed":false},{"id":11,"title":"title","completed":false}]}
+================================================================================
+#
+--Output from testCreate--
+Switching to browser client [default]
+Creating to new client [default] of type [class com.grailsrocks.functionaltest.client.BrowserClient]
+
+== Making request POST http://localhost:8080/todo/api/todo?useEntityRootName=false&dataFieldsOnly=false parameters: ==
+== Request headers: ============================================================
+Content-type: application/json
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+{"data":{"title":"title.one"}}
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"data":{"id":12,"title":"title.one","completed":false},"success":true}
+================================================================================
+#
+== Making request POST http://localhost:8080/todo/api/todo?useEntityRootName=true&dataFieldsOnly=true parameters: ==
+== Request headers: ============================================================
+Content-type: application/json
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+{"todo":{"title":"title.one"}}
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"todo":{"id":13,"title":"title.one","completed":false}}
+================================================================================
+#
+--Output from testShow--
+Switching to browser client [default]
+Creating to new client [default] of type [class com.grailsrocks.functionaltest.client.BrowserClient]
+
+== Making request GET http://localhost:8080/todo/api/todo/1?useEntityRootName=false&dataFieldsOnly=false parameters: ==
+== Request headers: ============================================================
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"data":{"id":1,"title":"eat","completed":false},"success":true}
+================================================================================
+#
+== Making request GET http://localhost:8080/todo/api/todo/1?useEntityRootName=true&dataFieldsOnly=true parameters: ==
+== Request headers: ============================================================
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"todo":{"id":1,"title":"eat","completed":false}}
+================================================================================
+#
+--Output from testUpdate--
+Switching to browser client [default]
+Creating to new client [default] of type [class com.grailsrocks.functionaltest.client.BrowserClient]
+
+== Making request PUT http://localhost:8080/todo/api/todo/1?useEntityRootName=false&dataFieldsOnly=false parameters: ==
+== Request headers: ============================================================
+Content-type: application/json
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+{"data":{"completed":false,"id":1,"title":"title.one"}}
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"data":{"id":1,"title":"title.one","completed":false},"success":true}
+================================================================================
+#
+== Making request PUT http://localhost:8080/todo/api/todo/1?useEntityRootName=true&dataFieldsOnly=true parameters: ==
+== Request headers: ============================================================
+Content-type: application/json
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+{"todo":{"completed":false,"id":1,"title":"title.one"}}
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"todo":{"id":1,"title":"title.one","completed":false}}
+================================================================================
+#
+--Output from testDelete--
+Switching to browser client [default]
+Creating to new client [default] of type [class com.grailsrocks.functionaltest.client.BrowserClient]
+
+== Making request DELETE http://localhost:8080/todo/api/todo/1?useEntityRootName=false&dataFieldsOnly=false parameters: ==
+== Request headers: ============================================================
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"data":{"id":1,"title":"title.one","completed":false},"success":true}
+================================================================================
+#
+== Making request DELETE http://localhost:8080/todo/api/todo/28?useEntityRootName=true&dataFieldsOnly=true parameters: ==
+== Request headers: ============================================================
+Accept-Encoding: gzip, deflate
+Accept: */*
+== Content =====================================================================
+
+================================================================================
+Interceptor createPage: TopLevelWindow[name=""]
+Content of web window [TopLevelWindow[name=""]] changed
+== Response was 200 (OK) headers: ==============================================
+================================================================================
+== Content =====================================================================
+{"todo":{"id":28,"title":"title","completed":false}}
+================================================================================
+#
+]]></system-out>
+  <system-err><![CDATA[--Output from testList--
+--Output from testCreate--
+--Output from testShow--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>
