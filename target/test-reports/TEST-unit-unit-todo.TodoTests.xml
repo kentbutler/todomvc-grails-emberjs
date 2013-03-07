@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="linux-apollo" name="todo.TodoTests" tests="1" time="0.412" timestamp="2013-03-06T14:08:00">
-  <properties />
-  <testcase classname="todo.TodoTests" name="testIsCompleted" time="0.397" />
-  <system-out><![CDATA[--Output from testIsCompleted--
-]]></system-out>
-  <system-err><![CDATA[--Output from testIsCompleted--
-]]></system-err>
-</testsuite>
