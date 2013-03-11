@@ -1,6 +1,6 @@
 # ![TodoMVC-Grails-Ember](https://github.com/kentbutler/todomvc-grails-emberjs.git)
 
-### Helping you learn EmberJS with Grails
+### Helping you learn to integrate EmberJS with Grails
 
 This is a sample app which integrates the EmberJS version of Addy Osmani's  TodoMVC collection of Todo apps, with Grails supplying the REST service.
 

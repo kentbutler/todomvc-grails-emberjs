@@ -12,24 +12,32 @@ class TodoFunctionalTests extends BrowserTestCase {
 	def log = LogFactory.getLog(getClass())
     def messageSource
 
+    void setUp() {
+        super.setUp()
+    }
+    
+    void tearDown() {
+        super.tearDown()
+    }
+
+    
     void testList() {
-        genericTestList(Todo)
+        genericTestList(new Todo(title:"title.one"))
     }
     
     void testCreate() {
-        genericTestCreate(Todo, [title:"title.one"])
+        genericTestCreate(new Todo(title:"title.one"))
     }
     
     void testShow() {
-        genericTestShow(Todo, [title:"title.one"])
+        genericTestShow(new Todo(title:"title.one"))
     }
     
     void testUpdate() {
-        genericTestUpdate(Todo, [title:"title.one"])
+        genericTestUpdate(new Todo(title:"title.one"), [title:"title.two"])
     }
     
     void testDelete() {
-        genericTestDelete(Todo)
+        genericTestDelete(new Todo(title:"title.one"))
     }
-    
 }

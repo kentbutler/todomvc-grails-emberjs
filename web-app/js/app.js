@@ -1,10 +1,12 @@
 /*global Ember*/
 window.Todos = Ember.Application.create();
 
-
-window.Todos.TodoRESTAdapter = DS.RESTSerializer.extend({
+// Override the default behaviour of the RESTSerializer to not convert
+//   my camelized field names into underscored versions
+Todos.TodoRESTAdapter = DS.RESTSerializer.extend({
 	  keyForAttributeName: function(type, name) {
 	    return name;
+	    //return Ember.String.decamelize(name);  // this is the default behaviour
 	  },
 
 	  keyForBelongsTo: function(type, name) {
@@ -28,32 +30,3 @@ window.Todos.TodoRESTAdapter = DS.RESTSerializer.extend({
 	  }
 });
 
-/*
-// This didn't work...probably needs a require()...?
-//
-// Try to override the default behaviour of the RESTSerializer
-DS.RESTSerializer.prototype.keyForAttributeName = function(type, name) {
-    //return Ember.String.decamelize(name);
-	return name;
-};
-
-DS.RESTSerializer.prototype.keyForBelongsTo = function(type, name) {
-    var key = this.keyForAttributeName(type, name);
-
-    if (this.embeddedType(type, name)) {
-      return key;
-    }
-
-    return key + "Id";
-};
-
-DS.RESTSerializer.prototype.keyForHasMany = function(type, name) {
-    var key = this.keyForAttributeName(type, name);
-
-    if (this.embeddedType(type, name)) {
-      return key;
-    }
-
-    return this.singularize(key) + "Ids";
-};
-*/	

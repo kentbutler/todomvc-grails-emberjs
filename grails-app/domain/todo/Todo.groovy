@@ -39,7 +39,7 @@ class Todo {
 
     
     /*
-    // This is the standard way to override JSON marshalling for this class
+    // This is the standard way to override JSON marshalling for a class
     //    It uses a ClosureOjectMarshaller[sic] to select fields for marshalling 
     //    It is less efficient for the plugin which is based on JSONObject, but this will be
     //    used if you do not define a 'toJSON' method.
