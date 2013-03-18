@@ -17,16 +17,14 @@ The baseline version of the web portion of this app can be found [in this reposi
 -- on updates, Ember automatically converts camelcase to underscored - i.e. property 'isCompleted' becomes 'is_completed' on the REST interface
 
 
-#### Changes to json-rest-api
+#### Changes to grails-json-rest-api (Living in a Fork)
 
-- [See the project](https://github.com/padcom/grails-json-rest-api)
-- Note if it's not there yet the pull is still pending
+[See the project for information](https://github.com/kentbutler/grails-json-rest-api)
 
 #### Grails project requirements
 
 This app uses the following plugins for testing:
 
-- [build-test-data](http://grails.org/plugin/build-test-data)
 - [functional-test](http://www.grails.org/plugin/functional-test)
 
 
@@ -39,17 +37,17 @@ To suss out the app do the following:
 * Download this app
         git clone https://github.com/kentbutler/todomvc-grails-emberjs.git
 
-* Download the fork of the grails-json-rest-api (at least for now)
+* Download the fork of the grails-json-rest-api 
         git clone https://github.com/kentbutler/grails-json-rest-api.git
 
 * Place them alongside each other and test the app by opening a console inside the todomvc directory and run:
-        grails test-app
--  observe the different JSON output styles of the json-rest-api
+        grails test-app -functional
+    - observe the different JSON output styles of the json-rest-api
 
 * If tests pass then run the app via
         grails run-app
 
-* If they do not pass, ensure the path to the json-rest-api inside of grails-app/conf/BuildConfig.groovy accurately locates the grails-json-rest-api plugin.
+* If they do not pass, ensure the path to the grails-json-rest-api inside of grails-app/conf/BuildConfig.groovy accurately locates the grails-json-rest-api plugin.
 
 
 #### [Kent Butler](https://github.com/kentbutler) - Developer
