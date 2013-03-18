@@ -35,16 +35,21 @@ To suss out the app do the following:
 * Install [Grails 2.1.1](http://grails.org/) 
 
 * Download this app
+
         git clone https://github.com/kentbutler/todomvc-grails-emberjs.git
 
 * Download the fork of the grails-json-rest-api 
+
         git clone https://github.com/kentbutler/grails-json-rest-api.git
 
 * Place them alongside each other and test the app by opening a console inside the todomvc directory and run:
+
         grails test-app -functional
+
     - observe the different JSON output styles of the json-rest-api
 
 * If tests pass then run the app via
+
         grails run-app
 
 * If they do not pass, ensure the path to the grails-json-rest-api inside of grails-app/conf/BuildConfig.groovy accurately locates the grails-json-rest-api plugin.
