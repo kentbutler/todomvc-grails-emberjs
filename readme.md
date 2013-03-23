@@ -10,10 +10,10 @@ The Grails app uses the json-rest-api plugin to provide the REST service.  Note 
 
 #### Changes that were required to the EmberJS TodoMVC app:
 
-The baseline version of the web portion of this app can be found [in this repository here](https://github.com/addyosmani/todomvc).
+The baseline version of the web portion of this app can be found [in this repository](https://github.com/addyosmani/todomvc).
 
 - modified store.js to use the DS.RESTAdapter and changed the 'url' parameter to match base app URL served at /context/api
-- modiied the todo model from 'isCompleted' to 'completed'
+- modified the todo model from 'isCompleted' to 'completed'
 -- on updates, Ember automatically converts camelcase to underscored - i.e. property 'isCompleted' becomes 'is_completed' on the REST interface
 
 
@@ -28,9 +28,7 @@ This app uses the following plugins for testing:
 - [functional-test](http://www.grails.org/plugin/functional-test)
 
 
-#### Installing and Executing
-
-To suss out the app do the following:
+####  Quickstart
 
 * Install [Grails 2.1.1](http://grails.org/) 
 
@@ -38,9 +36,11 @@ To suss out the app do the following:
 
         git clone https://github.com/kentbutler/todomvc-grails-emberjs.git
 
-* Download the fork of the grails-json-rest-api 
+* Download the fork of the `grails-json-rest-api` and check out the EmberJS branch
 
-        git clone https://github.com/kentbutler/grails-json-rest-api.git
+        git clone https://github.com/kentbutler/grails-json-rest-api.git <my local dir>
+        cd <my local dir>
+        git checkout emberjs-support
 
 * Place them alongside each other and test the app by opening a console inside the todomvc directory and run:
 
